@@ -31,7 +31,6 @@ localhost:9000/api/v1/data
 ```
 
 
-
 ## Localhost port:
 ```bash
 {
