@@ -23,3 +23,19 @@ kafka-topics.sh --list --zookeeper zookeeper:2181
 ```bash
 kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic <topic name> --from-beginning
 ```
+
+
+## Localhost port:
+```bash
+localhost:9000/api/v1/data
+```
+
+
+
+## Localhost port:
+```bash
+{
+    "text": "final"
+}
+```
+
