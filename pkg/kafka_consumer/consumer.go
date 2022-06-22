@@ -15,7 +15,7 @@ func Readcon() {
 		groupName    string
 	)
 
-	flag.StringVar(&topicName, "topic_name", "test", "topic_name")
+	flag.StringVar(&topicName, "topic_name", "topic1", "topic_name")
 	flag.StringVar(&consumerName, "consumer_name", "default_consumer", "consumer_name")
 	flag.StringVar(&groupName, "group_name", "g1", "group_name")
 
@@ -31,15 +31,12 @@ func Readcon() {
 	}
 	reader := kafka.NewReader(readcon)
 
-	fmt.Println(readcon)
-
 	for {
-		fmt.Println("yes")
 		m, err := reader.ReadMessage(context.Background())
 		if err != nil {
 			fmt.Println("some error occured", err)
 			continue
 		}
-		fmt.Println(consumerName + ": message from " + topicName + " => " + string(m.Value))
+		fmt.Println(consumerName + ": message from " + topicName + " under group" + groupName + " => " + string(m.Value))
 	}
 }
