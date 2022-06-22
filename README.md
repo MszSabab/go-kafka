@@ -3,7 +3,7 @@
 Segmentio/kafka-go is used to connect with Kafka.
 There are two ways to run this code. 
 One way is to hit the api for two differant service(producer and consumer). For this kafka producer and kafka consumer modules are needed.
-Another way is to use the generate_message function, by this, illustration can be seen of iterating some numbers to differant consumers.
+Another way is to use the generate_message function for consumer. By this, an illustration can be seen of iterating some numbers to differant consumers.
 
 ## Dependency:
 ```bash
