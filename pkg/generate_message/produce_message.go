@@ -1,11 +1,12 @@
-package kafka_producer
+package generate_message
 
 import (
 	"context"
 	"fmt"
-	"github.com/segmentio/kafka-go"
 	"strconv"
 	"time"
+
+	"github.com/segmentio/kafka-go"
 )
 
 func ProduceMessage(ctx context.Context, topic string, kafkaBrokerUrl string) {

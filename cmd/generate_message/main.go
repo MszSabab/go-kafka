@@ -2,10 +2,11 @@ package main
 
 import (
 	"context"
-	"github.com/MszSabab/go-kafka/pkg/kafka_producer"
-	"github.com/namsral/flag"
 	"runtime"
 	"strings"
+
+	"github.com/MszSabab/go-kafka/pkg/generate_message"
+	"github.com/namsral/flag"
 )
 
 func main() {
@@ -20,7 +21,7 @@ func main() {
 
 	ctx := context.Background()
 	for _, topic := range strings.Split(kafkaTopics, ",") {
-		go kafka_producer.ProduceMessage(ctx, topic, kafkaBrokerUrl)
+		go generate_message.ProduceMessage(ctx, topic, kafkaBrokerUrl)
 	}
 	runtime.Goexit()
 }
