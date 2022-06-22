@@ -17,10 +17,15 @@ make kafka
 make clean
 ```
 
-## Main func:
+## Main func for api hit:
+```bash
+go run cmd/producer/main.go
+go run cmd/consumer/main.go --topic_name topic1 --consumer_name firstConsumer --group_name g1
+```
+
+## Main func for generating number:
 ```bash
 go run cmd/generate_message/main.go --kafka-topic=topic1
-go run cmd/consumer/main.go --topic_name topic1 --consumer_name firstConsumer --group_name g1
 ```
 
 ## Kafka shell
