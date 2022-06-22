@@ -1,6 +1,6 @@
 # KAFKA COMMANDS:
 
-Segmentio/kafka-go is used to connect into Kafka
+Segmentio/kafka-go is used to connect with Kafka
 
 ## Dependency:
 ```bash
