@@ -1,6 +1,9 @@
 # KAFKA COMMANDS:
 
-Segmentio/kafka-go is used to connect with Kafka
+Segmentio/kafka-go is used to connect with Kafka.
+There are two ways to run this code. 
+One way is to hit the api. For this kafka producer and kafka consumer modules are needed.
+Another way is to use the generate_message function, by this, illustration can be seen of iterating some numbers to differant consumers.
 
 ## Dependency:
 ```bash
@@ -12,6 +15,12 @@ go mod tidy
 ```bash
 make kafka
 make clean
+```
+
+## Main func:
+```bash
+go run cmd/generate_message/main.go --kafka-topic=topic1
+go run cmd/consumer/main.go --topic_name topic1 --consumer_name firstConsumer --group_name g1
 ```
 
 ## Kafka shell
