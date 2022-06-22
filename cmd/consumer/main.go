@@ -7,6 +7,6 @@ import (
 )
 
 func main() {
-	fmt.Println("okay")
+	fmt.Println("kafka consumer started ====================>")
 	kafka_consumer.Readcon()
 }

@@ -31,10 +31,7 @@ func Readcon() {
 	}
 	reader := kafka.NewReader(readcon)
 
-	fmt.Println(readcon)
-
 	for {
-		fmt.Println("yes")
 		m, err := reader.ReadMessage(context.Background())
 		if err != nil {
 			fmt.Println("some error occured", err)
